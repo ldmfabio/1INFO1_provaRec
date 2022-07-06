@@ -7,10 +7,20 @@
     */
 
     //Entrada
-
+    //Na próxima linha, o preço da garrafa informado pelo usuário é atribuído a uma constante
+    const precoGarrafa = Number(prompt("Informe o preço da garrafa de vinho:"))
 
     //Processamento
-
+    //Na próxima linha, calculam-se quantas garrafas de vinho serão consumidas no ano, considerando que uma garrafa é consumida a cada dois dias. O ano possui 365 dias, conforme especificado na descrição do problema.
+    const garrafasAno = 365 / 2
+    //Na próxima linha, calculam-se quantas garrafas de vinho serão consumidas ao fim de dois anos
+    const totalGarrafas = garrafasAno * 2
+    //Na próxima linha, calcula-se o custo total das garrafas de vinho, de acordo com o preço informado pelo usuário e a quantidade que será consumida durante os dois anos
+    const custoGarrafas = totalGarrafas * precoGarrafa
+    //Na próxima linha, faz-se um cálculo para ver quantos litros de vinho serão consumidos, multiplicando a quantidade de garrafas por 0.750, que é o tamanho da garrafa em litros (0.75 litros). Lembre-se que o último zero a direita não influencia em nada no cálculo, ou seja, poderia ser multiplicado por 0.75
+    const litrosVinho = totalGarrafas * 0.750
 
     //Saída
+    //Na próxima linha os dados solicitados são apresentados na tela.
+    document.write(`Ao fim de dois anos terão sido consumidos ${litrosVinho} litros de vinho, com custo total de ${custoGarrafas}`)
 </script>

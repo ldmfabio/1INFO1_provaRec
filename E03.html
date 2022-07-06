@@ -7,10 +7,24 @@
     */
 
     //Entrada
-
+    //Na próxima linha, a const salarioMinimoAtual receberá o valor atual do salário mínimo, especificado no problema
+    const salarioMinimoAtual = 1212
+    //Na próxima linha, a const inflacaoAnual receberá a porcentagem de reajuste anual, referente a inflação, que será informado pelo usuário
+    const inflacaoAnual = parseInt(prompt("Informe a porcentagem de reajuste anual da inflação:"))
 
     //Processamento
-
+    //Na próxima linha, será calculado o reajuste do salário para o ano de 2023, baseado no salário de 2022
+    const salarioMinimo2023 = salarioMinimoAtual + (salarioMinimoAtual * (inflacaoAnual / 100))
+    //Na próxima linha, será calculado o reajuste do salário para o ano de 2024, baseado no salário de 2023
+    const salarioMinimo2024 = salarioMinimo2023 + (salarioMinimo2023 * (inflacaoAnual / 100))
+    //Na próxima linha, será calculado o reajuste do salário para o ano de 2025, baseado no salário de 2024
+    const salarioMinimo2025 = salarioMinimo2024 + (salarioMinimo2024 * (inflacaoAnual / 100))
+    //Na próxima linha, será calculado o reajuste do salário para o ano de 2026, baseado no salário de 2025
+    const salarioMinimo2026 = salarioMinimo2025 + (salarioMinimo2025 * (inflacaoAnual / 100))
+    //Na próxima linha, será calculado o reajuste do salário para o ano de 2027, baseado no salário de 2026
+    const salarioMinimo2027 = salarioMinimo2026 + (salarioMinimo2026 * (inflacaoAnual / 100))
 
     //Saída
+    //Na próxima linha os dados solicitados são apresentados em tela.
+    document.write(`O salário mínimo previsto para 2027 é de R$ ${salarioMinimo2027.toFixed(2)}`)
 </script>

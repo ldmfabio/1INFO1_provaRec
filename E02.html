@@ -7,10 +7,24 @@
     */
 
     //Entrada
-
+    //Na próxima linha, a const distanciaViagem receberá a distância total da viagem, informada pelo usuário
+    const distanciaViagem = Number(prompt("Informe a distância da viagem, em quilômetros:"))
+    //Na próxima linha, a const precoCombustivel receberá o preço do litro do combustível, informado pelo usuário
+    const precoCombustivel = Number(prompt("Informe o preço do litro de combustível:"))
 
     //Processamento
-
-
+    //Na próxima linha, será atribuído para a const litrosCombustivelConsumido o valor resultante da divisão da distância da viagem pela autonomia do carro. Dessa forma será identificado a quantidade de litros de combustível necessário para a viagem. A Função Math.ceil arredonda para o próximo número inteiro. Se o resultado da divisão for 4.4, por exemplo, a função Math.ceil arredondará o resultado para 5.
+    const litrosCombustivelConsumido = Math.ceil(distanciaViagem / 14)
+    //Na próxima linha, a const custoCombustivel receberá o resultado da multiplicação dos litros de combustível consumidos previstos pelo preço do litro do combustível, que foi informado pelo usuário.
+    const custoCombustivel = litrosCombustivelConsumido * precoCombustivel
+    //Na próxima linha, será calculado quantas vezes o viajante passará pelo pedágio, considerando que haverá um pedágio a cada 50 quilômetros. A função utilizada (floor) servirá para arredondar o valor obtido da divisão para o próximo número inteiro menor, a fim de desconsiderar as casas decimais resultantes da divisão.
+    const vezesPedagio = Math.floor(distanciaViagem / 50)
+    //Na próxima linha, será calculado o custo total do pedágio, considerando que será feita uma multiplicação entre a quantidade de vezes que o viajante passará pelo pedágio e o valor pago para cada pedágio (R$ 4,90)
+    const custoPedagio = vezesPedagio * 4.9
+    //Na próxima linha, será calculado o custo total da viagem, efetuando uma soma do custo total gasto em combustível e o custo total em pedágio
+    const custoTotalViagem = custoCombustivel + custoPedagio
+    
     //Saída
+    //Na próxima linha os dados solicitados são apresentados em tela.
+    document.write(`Serão consumidos ${litrosCombustivelConsumido} litros de combustível, com o custo de R$ ${custoCombustivel.toFixed(2)}. O custo do pedágio será de R$ ${custoPedagio.toFixed(2)}. O Custo total da viagem será de R$ ${custoTotalViagem.toFixed(2)}`)
 </script>
