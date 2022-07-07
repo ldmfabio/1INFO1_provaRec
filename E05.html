@@ -7,10 +7,16 @@
     */
 
     //Entrada
-
+    const nota1 = Number(prompt("Informe a nota da primeira prova:"))
+    const nota2 = Number(prompt("Informe a nota da segunda prova:"))
+    const nota3 = Number(prompt("Informe a nota da terceira prova:"))
 
     //Processamento
-
+    const valor1 = nota1 * 3
+    const valor2 = nota2 * 4
+    const valor3 = nota3 * 3
+    const mediaFinal = (valor1 + valor2 + valor3) / 10
 
     //Saída
+    document.write(`A média final é de ${mediaFinal.toFixed(2)}`)
 </script>

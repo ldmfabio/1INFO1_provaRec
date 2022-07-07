@@ -7,10 +7,14 @@
     */
 
     //Entrada
-
+    const precoGarrafa = Number(prompt("Informe o preço da garrafa de vinho:"))
 
     //Processamento
-
+    const garrafasAno = 365 / 2
+    const litrosAno = garrafasAno * 0.750
+    const litrosConsumidosTotal = litrosAno * 2
+    const custoTotalVinho = precoGarrafa * garrafasAno * 2
 
     //Saída
+    document.write(`Foram consumidos ${litrosConsumidosTotal}, e houve um gasto de R$ ${custoTotalVinho}`)
 </script>

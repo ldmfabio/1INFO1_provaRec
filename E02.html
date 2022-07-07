@@ -7,10 +7,16 @@
     */
 
     //Entrada
-
+    const distanciaViagem = Number(prompt("Informe a distância da viagem:"))
+    const precoCombustivel = Number(prompt("Informe o preço do litro do combustível:"))
 
     //Processamento
-
+    const litrosConsumidos = distanciaViagem / 14
+    const custoCombustivel = litrosConsumidos * precoCombustivel
+    const totalPedagios = Math.floor(distanciaViagem / 50)
+    const custoPedagio = totalPedagios * 4.9
+    const valorViagem = custoCombustivel + custoPedagio
 
     //Saída
+    document.write(`Foram consumidos ${litrosConsumidos} litros de combustível, no custo de R$ ${custoCombustivel.toFixed(2)}. O custo em pedágio foi de R$ ${custoCombustivel.toFixed(2)}. O valor total da viagem foi de R$ ${valorViagem.toFixed(2)}.`)
 </script>
